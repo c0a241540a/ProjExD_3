@@ -170,7 +170,7 @@ def main():
     bird = Bird((300, 200))
     beam = None
     #bomb = Bomb((255, 0, 0), 10)
-    score=Score(0, "hgp創英角ﾎﾟｯﾌﾟ体", (0, 0, 255))
+    score = Score(0, "hgp創英角ﾎﾟｯﾌﾟ体", (0, 0, 255))#空白追加issues1
     bombs =[]
     for a in range(NUM_OF_BOMBS):
         bombs.append(Bomb((255, 0, 0), 10))

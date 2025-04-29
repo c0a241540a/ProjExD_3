@@ -139,7 +139,21 @@ class Bomb:
             self.vy *= -1
         self.rct.move_ip(self.vx, self.vy)
         screen.blit(self.img, self.rct)
+"""
+class Score:
 
+    def __init__(self,score=0):
+        self.score=score
+        self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
+        self.txt=self.fonto.render("score", 0,(0, 0, 255))
+        self.score.set_colorkey((0, 0, 255))
+        self.rct = self.txt.get_rect()
+        self.rct.center = 100,50
+        
+        
+    def update(self, screen: pg.Surface):
+        screen.blit(self.txt)
+"""
 
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
@@ -172,7 +186,6 @@ def main():
                 pg.display.update()
                 time.sleep(1)
                 return
-        
         
            # if bomb is not None:
         for j, bomb in enumerate(bombs):

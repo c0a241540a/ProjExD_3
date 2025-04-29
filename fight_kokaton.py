@@ -143,10 +143,9 @@ class Bomb:
 class Score:
     def __init__(self, point: int, font: str, color: tuple[int, int, int]):
         """
-        引数に基づき、スコアを表示するSurfaceを生成する
-        引数1 point: スコアの初期値
-        引数2 font: フォントの指定
-        引数3 color: フォントの色(R,G,B)
+        point: スコアの初期値
+        font: フォントの指定
+        color: フォントの色
         """
         self.fonto = pg.font.SysFont(font, 30)
         self.img = self.fonto.render(f"スコア:{point}", 0, color)
@@ -156,8 +155,8 @@ class Score:
 
     def update(self, screen: pg.Surface, point: int):
         """
-        引数1 screen：画面Surface
-        引数2 point: スコア変動時の値
+        screen：画面Surface
+        point: スコア変動時の値
         """
         self.img = self.fonto.render(f"スコア:{point}", 0, (0, 0, 255))
         screen.blit(self.img, self.rct)
@@ -207,7 +206,7 @@ def main():
                     point += 1
             bombs = [bomb for bomb in bombs if bomb is not None]#撃ち落されてない爆弾のリスト
 
-
+ 
         
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)

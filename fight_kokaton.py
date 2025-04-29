@@ -139,7 +139,7 @@ class Bomb:
             self.vy *= -1
         self.rct.move_ip(self.vx, self.vy)
         screen.blit(self.img, self.rct)
-"""
+
 class Score:
 
     def __init__(self,score=0):
@@ -153,7 +153,7 @@ class Score:
         
     def update(self, screen: pg.Surface):
         screen.blit(self.txt)
-"""
+
 
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
